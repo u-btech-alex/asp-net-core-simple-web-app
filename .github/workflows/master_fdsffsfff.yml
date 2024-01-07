@@ -21,7 +21,10 @@ jobs:
         with:
           dotnet-version: '7.x'
           include-prerelease: true
-
+      - name: Install dependencies Azure.Identity
+        run: dotnet add package Azure.Identity
+      - name: install dependancy
+        run: dotnet add package Azure.Security.KeyVault.Secrets
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
