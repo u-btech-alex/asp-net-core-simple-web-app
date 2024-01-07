@@ -14,7 +14,7 @@ using Azure.Core;
 
 var client = new SecretClient(new Uri("https://test-kvalex.vault.azure.net/"), new DefaultAzureCredential());  
   
-KeyVaultSecret secret = client.GetSecret("test");  
+KeyVaultSecret secret = client.GetSecret("alex");  
 string secretValue = secret.Value;  
 namespace WebApp
 {
