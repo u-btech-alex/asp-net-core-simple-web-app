@@ -23,7 +23,7 @@ SecretClientOptions options = new SecretClientOptions()
     };
 var client = new SecretClient(new Uri("https://https://test-kvalex.vault.azure.net/"), new DefaultAzureCredential(),options);
 
-KeyVaultSecret secret = client.GetSecret("test");
+KeyVaultSecret secret = client.GetSecret("alex");
 
 string secretValue = secret.Value;
 
