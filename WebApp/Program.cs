@@ -12,10 +12,10 @@ using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using Azure.Core;
 
-var client = new SecretClient(new Uri("https://test-kvalex.vault.azure.net/"), new DefaultAzureCredential());  
+// var client = new SecretClient(new Uri("https://test-kvalex.vault.azure.net/"), new DefaultAzureCredential());  
   
-KeyVaultSecret secret = client.GetSecret("test");  
-string secretValue = secret.Value;  
+// KeyVaultSecret secret = client.GetSecret("test");  
+// string secretValue = secret.Value;  
 namespace WebApp
 {
     public class Program
