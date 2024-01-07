@@ -8,7 +8,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApp.Models;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Azure.Core;
 
+var client = new SecretClient(new Uri("https://test-kvalex.vault.azure.net/"), new DefaultAzureCredential());  
+  
+KeyVaultSecret secret = client.GetSecret("test");  
+string secretValue = secret.Value;  
 namespace WebApp
 {
     public class Program
@@ -17,6 +24,7 @@ namespace WebApp
         {
             /*CreateHostBuilder(args).Build().Run();*/
             var host = CreateHostBuilder(args).Build();
+
 
             using (var scope = host.Services.CreateScope())
             {
