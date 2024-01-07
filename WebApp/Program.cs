@@ -25,7 +25,7 @@ var client = new SecretClient(new Uri("https://https://test-kvalex.vault.azure.n
 
 KeyVaultSecret secret = client.GetSecret("alex");
 
-string secretValue = secret.Value;
+// string secretValue = secret.Value;
 
 namespace WebApp
 {
