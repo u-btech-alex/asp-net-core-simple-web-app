@@ -21,7 +21,7 @@ SecretClientOptions options = new SecretClientOptions()
             Mode = RetryMode.Exponential
          }
     };
-var client = new SecretClient(new Uri("https://https://test-kvalex.vault.azure.net/"), new DefaultAzureCredential(),options);
+var client = new SecretClient(new Uri("https://https://test-kvalex.vault.azure.net"), new DefaultAzureCredential(),options);
 
 KeyVaultSecret secret = client.GetSecret("test");
 
